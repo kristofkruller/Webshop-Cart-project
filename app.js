@@ -12,7 +12,24 @@ let cart = []
 
 // getting the products
 class Products{
-
+    async getProducts(){
+        try {
+        let result = await fetch('products.json');
+        let data = await result.json();
+        //object properties restucture
+        let products = data.items;
+        products = products.map(item =>{
+            const {title,price} = item.fields;
+            const {id} = item.sys;
+            const image = item.fields.image.fields.file.url;
+            return {title, price, id, image}
+        })
+        return products
+        //restucture end
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
 // display products
 class UI{
@@ -26,4 +43,8 @@ class Storage{
 document.addEventListener('DOMContentLoaded', () => {
     const ui = new UI();
     const products = new Products();
+
+    // get all products
+    products.getProducts().then(products => console.log(products));
+
 });
