@@ -140,6 +140,9 @@ class UI {
         cartContent.addEventListener('click', event => {
             if(event.target.classList.contains('remove-item')){
                 let removeItem = event.target;    
+                let id = removeItem.dataset.id;
+                cartContent.removeChild(removeItem.parentElement.parentElement);
+                this.removeItem(id);
             }      
         });
     }
