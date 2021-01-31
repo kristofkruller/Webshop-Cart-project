@@ -112,6 +112,7 @@ body {
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
 }
+
 .img-container {
   position: relative;
   overflow: hidden;
