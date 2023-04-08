@@ -8,6 +8,7 @@ const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
 const cartContent = document.querySelector('.cart-content');
 const productsDOM = document.querySelector('.products-center');
+
 //cart empty array
 let cart = [];
 //buttons empty array 
@@ -41,7 +42,7 @@ class UI {
             result += `
             <aricle class="product">
                 <div class="img-container">
-                    <img src=${product.image} alt="product"
+                    <img src=${ product.image ? product.image : `./assets/placeholder.jpeg` } alt="product image"
                     class="product-img">
                     <button class="bag-btn" data-id=${product.id}>
                     <i class="fas fa-shopping-cart"></i>
@@ -222,46 +223,3 @@ document.addEventListener('DOMContentLoaded', () => {
         ui.cartLogic();
     });
 });
-
-/* Project process line --------------------------------
-- First set up: selectors then determine the 
-classes (Products UI and Storage as empty-body classes) and let cart an empty array, 
-for last move e listener for DOMcontent  establish class callers. 
--- get Products session, fetch establising, async await (instead of old .then because i dont need a sequence) for fetch JSON, 
-after we get back the data with the result itself and put it into json(); 
-Wrap in Try - and put Catch in the end - added for error trap.
--- originally the json content was set up to match with Contentful
-(https://www.contentful.com/). I did not wanted to use that way so next 
-//object properties restucture field established. Using map() method every item 
-will be a new object (in the array), when map is on destructuring out elements from "field" property, so we have 
-title,price id image so its more clean. in the return we give back the clean object. 
-out of map(){} return again, but there the products itself to let them be created. 
-
-- At UI Class I want to display products next. let result empty string. forEach for the argument. 
-return+= will add for result variable instead of overwriting it. With backticks import the 
-HTML product element to the function body. Swap its elements to dynamic ${} attributes.
-Right after the forEach session access the variable what holds originally the HTML element and
-refer back the result method.
--- For Buttons, function create. Inside do a selection (this [...selector] is a nice way to get instantly array, not 
-Nodelist for selection, so I dont need to transorm it separately).  
-Next set up a forEach callback. Inside ceate variables. find() method used for id match. 
-If(){} else(){} for the button behaviour. 
-event.target set to disabled after clicked and text in cart. 
-Rest of the functions inside this one are //commented directly. Structure of Storage follows the sequence of UI elements.
--- the counter can be found in this Class as well. setCartValue works with map(){}.
-Just give back the value after the countings with innerText and must be parsed to let it be a number.
--- addCartItem adds a div with classList to HTML with dynamic ${} elements. 
-As closure must be appended to parent to declare position within the DOM. 
--- Show and hide cart are simple class adding / removing methods.
--- setupAPP:
-
-- Storage class will contain static methods, then I can reuse them in the UI Class. 
-for setItem the data must be stringified because storage can not store them as an Array.
---Next JSON parse to get items from the local storage. find() return product if the id matches. 
---saveCart JSON stringify again
---getCart can be done with if - else, or with ? : operators. If you have value already in the cart,
-itt will parse local storage. If empty then we get empty array. 
-
-
-
-*/

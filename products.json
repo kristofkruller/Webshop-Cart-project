@@ -5,7 +5,7 @@
       "fields": {
         "title": "armor 1",
         "price": 10.99,
-        "image": { "fields": { "file": { "url": "./images/product-1.jpeg" } } }
+        "image": { "fields": { "file": { "url": "" } } }
       }
     },
     {
@@ -13,7 +13,7 @@
       "fields": {
         "title": "armor 2",
         "price": 12.99,
-        "image": { "fields": { "file": { "url": "./images/product-2.jpeg" } } }
+        "image": { "fields": { "file": { "url": "" } } }
       }
     },
     {
@@ -21,7 +21,7 @@
       "fields": {
         "title": "armor 3",
         "price": 12.99,
-        "image": { "fields": { "file": { "url": "./images/product-3.jpeg" } } }
+        "image": { "fields": { "file": { "url": "" } } }
       }
     },
     {
@@ -29,7 +29,7 @@
       "fields": {
         "title": "armor 4",
         "price": 22.99,
-        "image": { "fields": { "file": { "url": "./images/product-4.jpeg" } } }
+        "image": { "fields": { "file": { "url": "" } } }
       }
     },
     {
@@ -37,7 +37,7 @@
       "fields": {
         "title": "armor 5",
         "price": 88.99,
-        "image": { "fields": { "file": { "url": "./images/product-5.jpeg" } } }
+        "image": { "fields": { "file": { "url": "" } } }
       }
     },
     {
@@ -45,7 +45,7 @@
       "fields": {
         "title": "armor 6",
         "price": 32.99,
-        "image": { "fields": { "file": { "url": "./images/product-6.jpeg" } } }
+        "image": { "fields": { "file": { "url": "" } } }
       }
     },
     {
@@ -53,7 +53,7 @@
       "fields": {
         "title": "armor 7",
         "price": 45.99,
-        "image": { "fields": { "file": { "url": "./images/product-7.jpeg" } } }
+        "image": { "fields": { "file": { "url": "" } } }
       }
     },
     {
@@ -61,7 +61,7 @@
       "fields": {
         "title": "armor 8",
         "price": 33.99,
-        "image": { "fields": { "file": { "url": "./images/product-8.jpeg" } } }
+        "image": { "fields": { "file": { "url": "" } } }
       }
     }
   ]
